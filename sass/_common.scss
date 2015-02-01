@@ -101,3 +101,7 @@ img {
   max-width: 100%;
   width: auto;
 }
+
+*, *:after, *:before {
+  @include border-box;
+}
