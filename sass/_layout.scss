@@ -1,14 +1,44 @@
 header {
-  background: white;
+  background: #DDD;
+  height: 33.333333vh;
+  text-align: center;
+  padding-top: 30px;
+  color: #333;
+  h1 {
+    color: #333;
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+}
+
+a {
+  color: #3070c7;
+  text-decoration: none;
 }
 
 section {
-  background: black;
+  background: #333;
+  height: 66.666666vh;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @include flex-row-at(0);
+  @include flex-gutters(10, 'flex-col');
+  li {
+    @include flex-column-percent(20%, 0);
+  }
 }
 
 figure {
-  float: left;
-  max-width: 20%;
-  max-height: 100%;
-  padding: 5px;
+  .photo {
+    @include intrinsic-ratio('.img');
+  }
+  .img {
+    background: transparent url() center center no-repeat;
+    background-size: cover;
+  }
 }
